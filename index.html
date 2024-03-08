@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyProfile</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/695c64f7ef.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/logo.png" class="logo">
+                <ul id="slidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#protfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-rectangle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hello, I am <span>Roshan </span><br>Lama from Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------about-------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/Myphoto.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Meet Roshan Lama: A proud native of Lamjung, Nepal, I'm on a mission to conquer the realm of
+                        Information Technology. Currently pursuing my Bachelor's degree at Gandaki University in
+                        Pokhara, I blend passion with purpose to craft innovative solutions. Join me as I navigate the
+                        digital landscape, driven by curiosity and fueled by ambition.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab " id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Wb Development</span><br>Designing Web/App interfaces</li>
+                            <li><span>App Development</span><br>Designing Web/App interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            "Though I may currently lack experiences, it brims with ambition and eagerness to
+                            learn. Join me as I embark on this journey, poised to turn every challenge into an
+                            opportunity for growth."
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025</span><br>BIT from Gandaki University</li>
+                            <li><span>2021</span><br>+2 Science From Prativa</li>
+                            <li><span>2018</span><br>SEE from HSBS Lamjung</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------services-------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellendus mollitia
+                        vero esse! Mollitia rerum tenetur consectetur quisquam quasi officia!</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-regular fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellendus mollitia
+                        vero esse! Mollitia rerum tenetur consectetur quisquam quasi officia!</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellendus mollitia
+                        vero esse! Mollitia rerum tenetur consectetur quisquam quasi officia!</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------protfolio--------- -->
+    <div id="protfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/sclwe.jpg">
+                    <div class="layer">
+                        <h3>School Website</h3>
+                        <p>This is my first website project created for my college project</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/ui.jpg">
+                    <div class="layer">
+                        <h3>UI</h3>
+                        <p>UI is user Interference </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/mobap.jpg">
+                    <div class="layer">
+                        <h3>Mobile APP</h3>
+                        <p>Mobile application development with help of andriod studio.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+                <a href="#" class="btn">See more</a>
+            </div>
+        </div>
+    </div>
+    <!-- -------------contact-------------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-regular fa-paper-plane"></i>rlama2603@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+977 9840850236</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100071262772055"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/taiyo_rosa/"><i
+                                class="fa-brands fa-square-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="Message" id="msg" cols="30" rows="10" placeholder="Type Message"
+                            required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="messg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright <i class="fa-regular fa-copyright"></i> Roshan</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemen = document.getElementById("slidemenu");
+        function openmenu() {
+            sidemen.style.right = "0";
+        }
+        function closemenu() {
+            sidemen.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyHnxX48g5XfeNTFea8tfv-U4YxSUV85hgKfBZqU6132XwIwZfIVxND1HjxLa5aHNhe/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("messg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Submitted Successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>
