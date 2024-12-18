@@ -244,6 +244,62 @@ transform: scale(1.1);
 .btn:hover{
     background: #ff004f;
 }
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden; /* Hides extra content outside of the container */
+}
+
+.work-group {
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+.work {
+    width: 33.33%; /* Display 3 items, each taking up 1/3 of the container's width */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+}
+
+.layer {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* ---------contact--------- */
 
 .contact-left{

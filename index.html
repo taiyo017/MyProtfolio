@@ -12,19 +12,21 @@
 <body>
     <div id="header">
         <div class="container">
-            <nav>
-                <img src="./assets/Images/logo.png" class="logo">
+            <nav class="nav" id="nav">
+                <img src="./assets/Images/logo.png" class="logo" alt="Logo">
+                <!-- Slide Menu -->
                 <ul id="slidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#protfolio">Portfolio</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fa-regular fa-rectangle-xmark" onclick="closemenu()"></i>
+                    <li><i class="fa-solid fa-bars open" onclick="responsiveNavbar()"></i></li>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-
+            
+                <!-- Hamburger Icon -->
             </nav>
+            
             <div class="header-text">
                 <p>Full Stack Developer</p>
                 <h1>Hello, I am <span>Roshan </span><br>Lama from Nepal</h1>
@@ -106,38 +108,66 @@
         </div>
     </div>
     <!-- ----------protfolio--------- -->
-    <div id="protfolio">
+    <div id="portfolio">
         <div class="container">
             <h1 class="subtitle">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="./assets/Images/sclwe.jpg">
-                    <div class="layer">
-                        <h3>School Website</h3>
-                        <p>This is my first website project created for my college project</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+            <div class="work-list slideshow-container">
+                <!-- Slide Group 1 -->
+                <div class="work-group mySlides">
+                    <div class="work">
+                        <img src="./assets/Images/school-website-basics.jpg" alt="School Website Project">
+                        <div class="layer">
+                            <h3>School Website</h3>
+                            <p>This was a full-fledged website project...</p>
+                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./assets/Images/ui.jpg" alt="UI/UX Design Project">
+                        <div class="layer">
+                            <h3>UI/UX Design</h3>
+                            <p>Designed a mobile app interface focusing on user journey...</p>
+                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Design</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="./assets/Images/todo.jpg" alt="Todo List App">
+                        <div class="layer">
+                            <h3>Todo List App</h3>
+                            <p>A user-friendly todo list application...</p>
+                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
+                        </div>
                     </div>
                 </div>
-                <div class="work">
-                    <img src="./assets/Images/ui.jpg">
-                    <div class="layer">
-                        <h3>UI</h3>
-                        <p>UI is user Interference </p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                <!-- Slide Group 2 -->
+                <div class="work-group mySlides">
+                    <div class="work">
+                        <img src="./assets/Images/Sort-O-Matic.jpg" alt="Sortomatic Project">
+                        <div class="layer">
+                            <h3>Sortomatic</h3>
+                            <p>Innovative project aimed at classifying waste...</p>
+                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
+                        </div>
                     </div>
-                </div>
-                <div class="work">
-                    <img src="./assets/Images/mobap.jpg">
-                    <div class="layer">
-                        <h3>Mobile APP</h3>
-                        <p>Mobile application development with help of andriod studio.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    <div class="work">
+                        <img src="./assets/Images/Guessinggame.jpg" alt="Guessing Game Project">
+                        <div class="layer">
+                            <h3>Guessing Game</h3>
+                            <p>Java Swing-based game where users guess numbers...</p>
+                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
+                        </div>
                     </div>
+                    
                 </div>
-                <a href="#" class="btn">See more</a>
+    
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
     </div>
+    
+    
     <!-- -------------contact-------------- -->
     <div id="contact">
         <div class="container">
@@ -173,48 +203,7 @@
             <p>Copyright <i class="fa-regular fa-copyright"></i> Roshan</p>
         </div>
     </div>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-    <script>
-        var sidemen = document.getElementById("slidemenu");
-        function openmenu() {
-            sidemen.style.right = "0";
-        }
-        function closemenu() {
-            sidemen.style.right = "-200px";
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyHnxX48g5XfeNTFea8tfv-U4YxSUV85hgKfBZqU6132XwIwZfIVxND1HjxLa5aHNhe/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("messg")
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Submitted Successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+   <script src="./assets/js/main.js"></script>
 
 </body>
 
