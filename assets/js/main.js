@@ -43,31 +43,57 @@ showSlides();
 
 
 //side-menu js
-responsiveNavbar=()=>{
+responsiveNavbar = () => {
     let x = document.getElementById('nav');
-    if(x.className==="nav"){
-        x.className+=" responsive";
+    if (x.className === "nav") {
+        x.className += " responsive";
     }
-    else{
-    x.className="nav";
+    else {
+        x.className = "nav";
     }
-    }
+}
 
 
 //form submission to google sheets
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyHnxX48g5XfeNTFea8tfv-U4YxSUV85hgKfBZqU6132XwIwZfIVxND1HjxLa5aHNhe/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("messg")
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyvugMTarLpu6FF7toZ3EfmPReFzgJmcIcjZ1hf89o72oDUFYYUmRgXZu7lxHHMtEH2/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById('messg');
+const submitButton = document.querySelector('.submit-btn');
+const btnText = document.querySelector('.btn-text');
+const btnLoading = document.querySelector('.btn-loading');
+
 form.addEventListener('submit', e => {
-    e.preventDefault()
+    e.preventDefault(); // Prevent default form submission
+
+    // Show loading animation
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline';
+    submitButton.disabled = true;
+
+    // Submit the form
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-            msg.innerHTML = "Submitted Successfully"
-            setTimeout(function () {
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
+            msg.innerHTML = "Message sent successfully!";
+            msg.style.color = "green";
+            form.reset();
 
-        .catch(error => console.error('Error!', error.message))
-})
+            // Reset the button after submission
+            setTimeout(() => {
+                msg.innerHTML = '';
+            }, 3000);
+        })
+        .catch(error => {
+            msg.innerHTML = "Something went wrong. Please try again.";
+            msg.style.color = "red";
+
+            setTimeout(() => {
+                msg.innerHTML = '';
+            }, 3000);
+        })
+        .finally(() => {
+            // Hide loading animation and enable button
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+            submitButton.disabled = false;
+        });
+});
