@@ -170,17 +170,20 @@ background: #ff004f;
  
 }
 /* -----------Portfolio Section------- */
+/* Portfolio Section */
 #portfolio {
-    padding:0;
+    padding: 0;
 }
 
+/* Work List Grid */
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* More flexible grid */
     gap: 30px;
     margin-top: 50px;
 }
 
+/* Individual Work Item */
 .work {
     border-radius: 15px;
     padding-left: 10px;
@@ -190,6 +193,7 @@ background: #ff004f;
     transition: transform 0.3s ease;
 }
 
+/* Image Styling */
 .work img {
     width: 100%;
     border-radius: 15px;
@@ -197,10 +201,11 @@ background: #ff004f;
     transition: transform 0.3s ease;
 }
 
+/* Overlay Layer */
 .layer {
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 0, 79, 0.8)); /* Slightly softened gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 0, 79, 0.8));
     border-radius: 15px;
     position: absolute;
     left: 0;
@@ -246,14 +251,16 @@ background: #ff004f;
     transform: scale(1.1);
 }
 
+/* Hover Effects for Work Item */
 .work:hover img {
-    transform: scale(1.05); /* Slight zoom-in effect */
+    transform: scale(1.05);
 }
 
 .work:hover .layer {
     height: 100%;
 }
 
+/* Button Styling */
 .btn {
     display: inline-block;
     margin: auto;
@@ -274,6 +281,7 @@ background: #ff004f;
     color: white;
 }
 
+/* Slideshow Container */
 .slideshow-container {
     position: relative;
     max-width: 100%;
@@ -281,6 +289,7 @@ background: #ff004f;
     border-radius: 15px;
 }
 
+/* Work Group Flex Layout */
 .work-group {
     display: flex;
     justify-content: space-between;
@@ -300,6 +309,7 @@ background: #ff004f;
     border-radius: 10px;
 }
 
+/* Layer Styling */
 .layer {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -316,6 +326,7 @@ background: #ff004f;
     background-color: rgba(0, 0, 0, 0.85);
 }
 
+/* Navigation Buttons */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -326,31 +337,113 @@ background: #ff004f;
     cursor: pointer;
     user-select: none;
     border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Removed transition */
 }
 
 .prev {
     left: 10px;
+    transform: translateY(-50%); /* Adjust vertical position */
 }
 
 .next {
     right: 10px;
+    transform: translateY(-50%); /* Adjust vertical position */
+}
+
+/* Arrow direction in responsive mode */
+@media (max-width: 767px) {
+    .prev, .next {
+        font-size: 24px; /* Increase size for mobile view */
+        padding: 20px;
+    }
+
+    .prev {
+        top: auto; /* Remove the top positioning */
+        bottom: 10px; /* Position it at the bottom */
+        transform: rotate(180deg) translateY(0); /* Arrow pointing down */
+    }
+
+    .next {
+        top: 10px; /* Position it at the top */
+        bottom: auto; /* Remove the bottom positioning */
+        transform: rotate(0deg) translateY(0); /* Arrow pointing up */
+    }
 }
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.7);
-    transform: scale(1.1);
+    /* Removed the transition */
 }
 
-@media (max-width: 768px) {
+/* Mobile Responsiveness */
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
     .work-list {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for smaller screens */
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        gap: 20px;
+    }
+
+    .work {
+        padding-left: 5px;
+    }
+
+    .work img {
+        border-radius: 10px;
+    }
+
+    .layer h3 {
+        font-size: 16px; /* Smaller text for better fit */
+    }
+
+    .layer a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px; /* Adjust link size for mobile */
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .slideshow-container {
+        margin: 20px 0;
     }
 
     .work-group {
-        flex-direction: column; /* Stack works vertically on smaller screens */
+        flex-direction: column;
+    }
+
+    .work {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Move prev and next buttons to the top and bottom */
+    .prev {
+        top: 10px; /* Move prev to the top */
+        bottom: auto; /* Ensure it doesn't show at the bottom */
+    }
+
+    .next {
+        bottom: 10px; /* Move next to the bottom */
+        top: auto; /* Ensure it doesn't show at the top */
     }
 }
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .work-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid on tablets */
+    }
+
+    .btn {
+        padding: 14px 45px;
+        font-size: 16px;
+    }
+}
+
 
 
 /* ---------contact--------- */
