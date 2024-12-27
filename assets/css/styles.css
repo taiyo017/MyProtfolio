@@ -404,25 +404,31 @@ background: #ff004f;
     transform: translateY(-5px);
 }
 
+/* General Button Styling */
 .btn.btn2 {
-    display: inline;
+    display: inline-block;
     background: #ff004f;
     cursor: pointer;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     border: none;
+    padding: 10px 20px; /* Add padding for better spacing */
+    text-align: center;
 }
 
+/* Contact Right Section */
 .contact-right {
     flex-basis: 60%;
     padding: 20px;
 }
 
+/* Form Styling */
 .contact-right form {
     width: 100%;
 }
 
+/* Input and Textarea Styling */
 form input,
 form textarea {
     width: 100%;
@@ -436,11 +442,14 @@ form textarea {
     border-radius: 10px;
 }
 
+/* Submit Button Styling */
 .submit-btn {
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    width: 30%; /* Full width for a more prominent button */
+    transition: all 0.3s ease;
+    width: 100%; /* Make button width responsive */
+    max-width: 300px; /* Set a max width for large screens */
+    margin: 0 auto; /* Center the button */
 }
 
 .submit-btn:disabled {
@@ -450,13 +459,11 @@ form textarea {
 
 .btn-text,
 .btn-loading {
-    /* position: absolute; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* Adjust font size of text on the button */
 .submit-btn .btn-text {
     font-size: 18px;
 }
@@ -466,10 +473,55 @@ form textarea {
     display: none;
 }
 
-/* Hover effect */
+/* Hover Effect */
 .submit-btn:hover {
-    background-color: #ff1f6a; /* Slightly darker shade for hover effect */
+    background-color: #ff1f6a;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-right {
+        flex-basis: 100%;
+        padding: 15px;
+    }
+
+    /* Form Input and Textarea Adjustments */
+    form input,
+    form textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Submit Button Adjustments */
+    .submit-btn {
+        width: 80%; /* Increase width for smaller screens */
+    }
+
+    .submit-btn .btn-text {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-right {
+        padding: 10px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .submit-btn {
+        width: 90%; /* Full width button on extra small screens */
+    }
+
+    .submit-btn .btn-text {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+}
+
 
 #messg {
     display: block;
@@ -484,42 +536,35 @@ form textarea {
     background: #262626;
     color: white;
     padding: 40px 0;
-    text-align: center;
+    text-align: center!important;
 }
+/* .footer-text {
+    padding-bottom: 10px;
+    text-align: center!important;
+} */
 
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #ababab;
-}
 
 .footer-social-icons a {
     color: #ababab;
     font-size: 30px;
-    margin: 0 15px;
-    transition: transform 0.3s ease;
+    margin: 0 4px;
+    /* transition: transform 0.3s ease; */
 }
 
 .footer-social-icons a:hover {
     color: #ff004f;
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
 }
 
-.copyright {
+/* .copyright {
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 5px 0;
     background: #262626;
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 10px;
     color: #ababab;
-}
+} */
 
 .copyright i {
     color: #ff004f;
