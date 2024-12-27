@@ -11,38 +11,64 @@ body{
     background: #080808;
     color: #fff;
 }
-#header{
+/* General Styles */
+#header {
     width: 100%;
     height: 100vh;
     background-image: url(/assets/Images/Bg.jpg);
-    background-size: 80%;
+    background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.container{
-    padding: 10px 10%;
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 10%;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    z-index: 1000;
 }
-.logo{
+
+.logo {
     width: 140px;
+    transition: width 0.3s ease;
 }
-nav ul li{
+
+/* Navbar List */
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 0 15px;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    transition: color 0.3s ease;
 }
-nav ul li a::after{
+
+/* Hover Effects */
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
@@ -50,23 +76,114 @@ nav ul li a::after{
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: width 0.5s ease;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover {
+    color: #ff004f;
+}
+
+nav ul li a:hover::after {
     width: 100%;
 }
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
 
+.header-text {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10%;
 }
-.header-text h1{
+
+.header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text h1 span{
+
+.header-text h1 span {
     color: #ff004f;
 }
+
+/* Hamburger Icon */
+.open {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Mobile and tablet responsiveness */
+    nav {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: #333;
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .header-text {
+        font-size: 24px;
+        margin-top: 30%;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .open {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Very small screens */
+    .logo {
+        width: 100px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .header-text {
+        font-size: 20px;
+        margin-top: 40%;
+    }
+
+    .header-text h1 {
+        font-size: 35px;
+    }
+}
+
 /* ------------about-------- */
 #about{
     padding: 80px 0;
@@ -664,65 +781,7 @@ form textarea {
 }
 
 /* ---------css--------for small screen--------- */
-nav .fa-regular, nav .fa-solid{
-    display: none;
-}
-@media only screen and (max-width: 768px) {
-    .header-text {
-        margin-top: 50%;
-        font-size: 20px;
-    }
 
-    .header-text h1 {
-        font-size: 40px;
-    }
-
-    nav ul {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: #ff004f;
-        text-align: center;
-        padding: 10px 0;
-        z-index: 2;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    nav ul .fa-regular,
-    nav .fa-solid {
-        display: block;
-        font-size: 25px;
-        color: #fff;
-        cursor: pointer;
-        margin-right: 20px;
-    }
-
-    nav.active {
-        display: flex;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #header {
-        background-image: url(Images/Myphoto.jpg);
-        width: 100%;
-    }
-
-    .header-text {
-        margin-top: 100%;
-        font-size: 16px;
-    }
-
-    .header-text h1 {
-        font-size: 30px;
-    }
-}
 #messg{
     color: #61b752;
     margin-top: 0px;
