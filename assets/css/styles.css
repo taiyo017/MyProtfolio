@@ -22,12 +22,14 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden; /* Ensure content doesn't spill out */
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     padding: 0 10%;
+    box-sizing: border-box; /* Prevent overflow caused by padding */
 }
 
 nav {
@@ -38,6 +40,8 @@ nav {
     position: absolute;
     top: 20px;
     z-index: 1000;
+    padding: 0 20px; /* Added padding to prevent overflow */
+    box-sizing: border-box;
 }
 
 .logo {
@@ -51,6 +55,7 @@ nav ul {
     align-items: center;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap; /* Ensure items wrap properly on small screens */
 }
 
 nav ul li {
@@ -92,6 +97,7 @@ nav ul li a:hover::after {
     text-align: center;
     font-size: 30px;
     margin-top: 10%;
+    box-sizing: border-box;
 }
 
 .header-text h1 {
@@ -131,6 +137,7 @@ nav ul li a:hover::after {
         background-color: #333;
         z-index: 1000;
         padding: 20px;
+        box-sizing: border-box;
     }
 
     nav ul.active {
@@ -182,45 +189,64 @@ nav ul li a:hover::after {
     .header-text h1 {
         font-size: 35px;
     }
+
+    .container {
+        padding: 0 5%;
+        box-sizing: border-box;
+    }
 }
 
 /* ------------about-------- */
-#about{
+#about {
     padding: 80px 0;
     color: #ababab;
+    box-sizing: border-box; /* Ensure padding does not cause overflow */
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
 }
-.about-col-1{
+
+.about-col-1 {
     flex-basis: 35%;
 }
-.about-col-1 img{
+
+.about-col-1 img {
     width: 100%;
     border-radius: 15px;
+    object-fit: cover; /* Ensures the image fits well within the container */
 }
-.about-col-2{
+
+.about-col-2 {
     flex-basis: 60%;
 }
-.subtitle{
+
+.subtitle {
     font-size: 60px;
     font-weight: 600;
     color: #fff;
 }
-.tab-titles{
+
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
-.tab-links{
+
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    margin-bottom: 15px;
 }
-.tab-links::after{
+
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -230,24 +256,56 @@ nav ul li a:hover::after {
     bottom: -8px;
     transition: 0.5s;
 }
-.tab-links.active-link::after{
-width: 50%;
+
+.tab-links.active-link::after {
+    width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
-
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
     color: #b54769;
     font-size: 14px;
 }
-.tab-contents{
+
+.tab-contents {
     display: none;
 }
-.tab-contents.active-tab{
+
+.tab-contents.active-tab {
     display: block;
 }
+
+/* Fixing layout for small screens */
+@media (max-width: 768px) {
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-links {
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .subtitle {
+        font-size: 30px;
+    }
+}
+
 /* ----------services----------- */
 #services{
     padding: 30px 0;

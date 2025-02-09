@@ -44,9 +44,10 @@ showSlides();
 
 //side-menu js
 function responsiveNavbar() {
-    const menu = document.getElementById("slidemenu");
+    var menu = document.getElementById("slidemenu");
     menu.classList.toggle("active");
 }
+
 
 
 //form submission to google sheets
