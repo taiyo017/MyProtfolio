@@ -644,33 +644,50 @@ background: #ff004f;
 }
 
 .contact-left p {
-    margin-top: 30px;
+    font-size: 18px; /* Default text size */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Spacing between icon and text */
+    margin-top: 15px;
+    word-break: break-word; /* Ensures text wraps properly */
 }
 
 .contact-left p i {
+    font-size: 22px; /* Default icon size */
     color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
+    min-width: 28px; /* Keeps icons aligned */
+    text-align: center;
 }
 
 .social-icons {
     margin-top: 30px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Ensures even spacing */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
 .social-icons a {
     text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
+    font-size: 28px; /* Slightly larger for better touch interaction */
     color: #ababab;
-    display: inline;
-    transition: transform 0.5s;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px; /* Set width for uniform buttons */
+    height: 45px; /* Set height for uniform buttons */
+    border-radius: 50%; /* Makes it circular */
+    background: #333; /* Background color for better visibility */
 }
 
 .social-icons a:hover {
     color: #ff004f;
-    transform: translateY(-5px);
+    background: #444;
+    transform: translateY(-3px);
 }
+
 
 /* General Button Styling */
 .btn.btn2 {
@@ -711,7 +728,7 @@ form textarea {
 }
 
 /* Submit Button Styling */
-.submit-btn {
+.submit-btn, .download-btn {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -732,7 +749,7 @@ form textarea {
     transform: translate(-50%, -50%);
 }
 
-.submit-btn .btn-text {
+.submit-btn .btn-text, .download-btn{
     font-size: 18px;
 }
 
@@ -748,6 +765,21 @@ form textarea {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .social-icons a,
+    .footer-social-icons a {
+        font-size: 24px;
+        width: 42px;
+        height: 42px;
+    }
+    .contact-left p {
+        font-size: 16px; /* Reduce text size for smaller screens */
+        gap: 10px; /* Adjust spacing */
+    }
+
+    .contact-left p i {
+        font-size: 20px; /* Slightly reduce icon size */
+        min-width: 26px;
+    }
     .contact-right {
         flex-basis: 100%;
         padding: 15px;
@@ -761,18 +793,37 @@ form textarea {
     }
 
     /* Submit Button Adjustments */
-    .submit-btn {
+    .submit-btn, .download-btn {
         width: 80%; /* Increase width for smaller screens */
     }
 
-    .submit-btn .btn-text {
+    .submit-btn .btn-text, .download-btn {
         font-size: 16px; /* Adjust font size for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
+    .contact-left p {
+        font-size: 14px; /* Reduce text size for extra small screens */
+        gap: 8px; /* Reduce spacing */
+    }
+
+    .contact-left p i {
+        font-size: 18px; /* Further reduce icon size */
+        min-width: 24px;
+    }
     .contact-right {
         padding: 10px;
+    }
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a,
+    .footer-social-icons a {
+        font-size: 22px;
+        width: 38px;
+        height: 38px;
     }
 
     form input,
@@ -781,11 +832,11 @@ form textarea {
         padding: 10px;
     }
 
-    .submit-btn {
+    .submit-btn, .download-btn {
         width: 90%; /* Full width button on extra small screens */
     }
 
-    .submit-btn .btn-text {
+    .submit-btn .btn-text, .download-btn {
         font-size: 14px; /* Adjust font size for mobile */
     }
 }
@@ -812,16 +863,31 @@ form textarea {
 } */
 
 
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
 .footer-social-icons a {
     color: #ababab;
-    font-size: 30px;
-    margin: 0 4px;
-    /* transition: transform 0.3s ease; */
+    font-size: 28px; /* Adjusted for mobile */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333;
+    transition: transform 0.3s, color 0.3s;
 }
 
 .footer-social-icons a:hover {
     color: #ff004f;
-    /* transform: translateY(-5px); */
+    background: #444;
+    transform: translateY(-3px);
 }
 
 /* .copyright {
