@@ -1,240 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyProfile</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/695c64f7ef.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/695c64f7ef.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div id="header">
-        <div class="container">
-            <nav class="nav" id="nav">
-                <img src="./assets/Images/logo.png" class="logo" alt="Logo">
-                <!-- Slide Menu -->
-                <ul id="slidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <!-- Hamburger Icon -->
-                <i class="fa-solid fa-bars open" onclick="responsiveNavbar()"></i>
-            </nav>
-    
-            <div class="header-text">
-                <p>Full Stack Developer</p>
-                <h1>Hello, I am <span>Roshan</span> Lama, from Nepal</h1>
-            </div>
+      <div class="container">
+        <nav class="nav" id="nav">
+          <img src="./assets/Images/logo.png" class="logo" alt="Logo" />
+          <!-- Slide Menu -->
+          <ul id="slidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <!-- Hamburger Icon -->
+          <i class="fa-solid fa-bars open" onclick="responsiveNavbar()"></i>
+        </nav>
+
+        <div class="header-text">
+          <p>Full Stack Developer</p>
+          <h1>Hello, I am <span>Roshan</span> Lama, from Nepal</h1>
         </div>
+      </div>
     </div>
-    
-    
-    
+
     <!-- -------------about-------------- -->
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <!-- About Column 1 (Image) -->
-                <div class="about-col-1">
-                    <img src="./assets/Images/Myphoto.jpg" alt="Roshan Lama's Photo">
-                </div>
-    
-                <!-- About Column 2 (Text Section) -->
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p class="about-text">
-                        Meet Roshan Lama: A proud native of Lamjung, Nepal, I'm on a mission to conquer the realm of
-                        Information Technology. Currently pursuing my Bachelor's degree at Gandaki University in Pokhara,
-                        I blend passion with purpose to craft innovative solutions. Join me as I navigate the digital
-                        landscape, driven by curiosity and fueled by ambition.
-                    </p>
-    
-                    <!-- Tab Titles -->
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-    
-                    <!-- Tab Contents -->
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI/UX:</span> Designing Web/App interfaces</li>
-                            <li><span>Web Development:</span> Building responsive websites</li>
-                            <li><span>App Development:</span> Crafting mobile applications</li>
-                        </ul>
-                    </div>
-    
-                    <div class="tab-contents" id="experience">
-                        <p>
-                            Though I may currently lack experience, I am brimming with ambition and eagerness to learn.
-                            Join me as I embark on this journey, poised to turn every challenge into an opportunity for growth.
-                        </p>
-                    </div>
-    
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2025:</span> BIT from Gandaki University</li>
-                            <li><span>2021:</span> +2 Science from Prativa</li>
-                            <li><span>2018:</span> SEE from HSBS Lamjung</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <!-- About Column 1 (Image) -->
+          <div class="about-col-1">
+            <img src="./assets/Images/Myphoto.jpg" alt="Roshan Lama's Photo" />
+          </div>
+
+          <!-- About Column 2 (Text Section) -->
+          <div class="about-col-2">
+            <h1 class="subtitle">About Me</h1>
+            <p class="about-text">
+              Meet Roshan Lama: A proud native of Lamjung, Nepal, I'm on a
+              mission to conquer the realm of Information Technology. Currently
+              pursuing my Bachelor's degree at Gandaki University in Pokhara, I
+              blend passion with purpose to craft innovative solutions. Join me
+              as I navigate the digital landscape, driven by curiosity and
+              fueled by ambition.
+            </p>
+
+            <!-- Tab Titles -->
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX:</span> Designing Web/App interfaces</li>
+                <li>
+                  <span>Web Development:</span> Building responsive websites
+                </li>
+                <li>
+                  <span>App Development:</span> Crafting mobile applications
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <p>
+                Though I may currently lack experience, I am brimming with
+                ambition and eagerness to learn. Join me as I embark on this
+                journey, poised to turn every challenge into an opportunity for
+                growth.
+              </p>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2025:</span> BIT from Gandaki University</li>
+                <li><span>2021:</span> +2 Science from Prativa</li>
+                <li><span>2018:</span> SEE from HSBS Lamjung</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
-    
+
     <!-- -----------services-------- -->
     <div id="services">
-        <div class="container">
-            <h1 class="subtitle">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellendus mollitia
-                        vero esse! Mollitia rerum tenetur consectetur quisquam quasi officia!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-regular fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellendus mollitia
-                        vero esse! Mollitia rerum tenetur consectetur quisquam quasi officia!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti repellendus mollitia
-                        vero esse! Mollitia rerum tenetur consectetur quisquam quasi officia!</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
+      <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              repellendus mollitia vero esse! Mollitia rerum tenetur consectetur
+              quisquam quasi officia!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-regular fa-crop"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              repellendus mollitia vero esse! Mollitia rerum tenetur consectetur
+              quisquam quasi officia!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>App Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+              repellendus mollitia vero esse! Mollitia rerum tenetur consectetur
+              quisquam quasi officia!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- ----------protfolio--------- -->
+    <!-- ----------portfolio--------- -->
     <div id="portfolio">
-        <div class="container">
-            <h1 class="subtitle">My Work</h1>
-            <div class="work-list slideshow-container">
-                <!-- Slide Group 1 -->
-                <div class="work-group mySlides">
-                    <div class="work">
-                        <img src="./assets/Images/school-website-basics.jpg" alt="School Website Project">
-                        <div class="layer">
-                            <h3>School Website</h3>
-                            <p>This was a full-fledged website project...</p>
-                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="./assets/Images/ui.jpg" alt="UI/UX Design Project">
-                        <div class="layer">
-                            <h3>UI/UX Design</h3>
-                            <p>Designed a mobile app interface focusing on user journey...</p>
-                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Design</a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="./assets/Images/todo.jpg" alt="Todo List App">
-                        <div class="layer">
-                            <h3>Todo List App</h3>
-                            <p>A user-friendly todo list application...</p>
-                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide Group 2 -->
-                <div class="work-group mySlides">
-                    <div class="work">
-                        <img src="./assets/Images/Sort-O-Matic.jpg" alt="Sortomatic Project">
-                        <div class="layer">
-                            <h3>Sortomatic</h3>
-                            <p>Innovative project aimed at classifying waste...</p>
-                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="./assets/Images/Guessinggame.jpg" alt="Guessing Game Project">
-                        <div class="layer">
-                            <h3>Guessing Game</h3>
-                            <p>Java Swing-based game where users guess numbers...</p>
-                            <a href="#" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
-                        </div>
-                    </div>
-                    
-                </div>
-    
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list slideshow-container">
+          <!-- Slide Group 1 -->
+          <div class="work-group mySlides active">
+            <div class="work">
+              <img
+                src="./assets/Images/school-website-basics.jpg"
+                alt="School Website Project"
+              />
+              <div class="layer">
+                <h3>School Website</h3>
+                <p>
+                  A responsive school website with admission forms, faculty
+                  section, notices, and a gallery. Focused on accessibility and
+                  mobile-first design.
+                </p>
+                <a href="#" target="_blank"
+                  ><i class="fa-solid fa-link"></i> View Project</a
+                >
+              </div>
             </div>
+            <div class="work">
+              <img src="./assets/Images/ui.jpg" alt="UI/UX Design Project" />
+              <div class="layer">
+                <h3>UI/UX Design</h3>
+                <p>
+                  Mobile app interface for a local delivery service,
+                  prioritizing simplicity and intuitive flow. Designed with
+                  Figma following design thinking principles.
+                </p>
+                <a href="#" target="_blank"
+                  ><i class="fa-solid fa-link"></i> View Design</a
+                >
+              </div>
+            </div>
+            <div class="work">
+              <img src="./assets/Images/todo.jpg" alt="Todo List App" />
+              <div class="layer">
+                <h3>Todo List App</h3>
+                <p>
+                  Clean and user-friendly web app with CRUD operations and local
+                  storage. Optimized for mobile and desktop usability.
+                </p>
+                <a href="#" target="_blank"
+                  ><i class="fa-solid fa-link"></i> View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide Group 2 -->
+          <div class="work-group mySlides">
+            <div class="work">
+              <img
+                src="./assets/Images/Sort-O-Matic.jpg"
+                alt="Sortomatic Project"
+              />
+              <div class="layer">
+                <h3>Sortomatic</h3>
+                <p>
+                  AI-powered smart waste segregation system using TensorFlow and
+                  Arduino. Identifies and sorts biodegradable vs.
+                  non-biodegradable waste.
+                </p>
+                <a href="#" target="_blank"
+                  ><i class="fa-solid fa-link"></i> View Project</a
+                >
+              </div>
+            </div>
+            <div class="work">
+              <img
+                src="./assets/Images/Guessinggame.jpg"
+                alt="Guessing Game Project"
+              />
+              <div class="layer">
+                <h3>Guessing Game</h3>
+                <p>
+                  Java Swing-based number guessing adventure game with timer,
+                  leaderboard, and progressive UI elements. Dark mode supported.
+                </p>
+                <a href="#" target="_blank"
+                  ><i class="fa-solid fa-link"></i> View Project</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Prev/Next Buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+
+        <!-- Dot pagination -->
+        <div style="text-align: center; margin-top: 20px">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+      </div>
     </div>
-    
-    
+
     <!-- -------------contact-------------- -->
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><i class="fa-regular fa-paper-plane"></i>rlama2603@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>+977 9840850236</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/profile.php?id=100071262772055"><i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/taiyo_rosa/"><i
-                                class="fa-brands fa-square-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-telegram"></i></a>
-                        <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"><i
-                                class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <a href="" class="btn btn2 download-btn">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbyvugMTarLpu6FF7toZ3EfmPReFzgJmcIcjZ1hf89o72oDUFYYUmRgXZu7lxHHMtEH2/exec" method="post">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" cols="30" rows="10" placeholder="Type your message here..." required></textarea>
-                        <button type="submit" class="btn btn2 submit-btn">
-                            <span class="btn-text">Submit</span>
-                            <span class="btn-loading" style="display: none;">Submitting...</span>
-                        </button>
-                    </form>
-                    <span id="messg"></span>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="subtitle">Contact Me</h1>
+            <p><i class="fa-regular fa-paper-plane"></i>rlama2603@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+977 9840850236</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=100071262772055"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="https://www.instagram.com/taiyo_rosa/"
+                ><i class="fa-brands fa-square-instagram"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
             </div>
+            <a href="" class="btn btn2 download-btn">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form
+              name="submit-to-google-sheet"
+              action="https://script.google.com/macros/s/AKfycbyvugMTarLpu6FF7toZ3EfmPReFzgJmcIcjZ1hf89o72oDUFYYUmRgXZu7lxHHMtEH2/exec"
+              method="post"
+            >
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                cols="30"
+                rows="10"
+                placeholder="Type your message here..."
+                required
+              ></textarea>
+              <button type="submit" class="btn btn2 submit-btn">
+                <span class="btn-text">Submit</span>
+                <span class="btn-loading" style="display: none"
+                  >Submitting...</span
+                >
+              </button>
+            </form>
+            <span id="messg"></span>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="footer">
-    <div class="container">
+      <div class="container">
         <div class="footer-content">
-            <p class="footer-text">Thank you for visiting! Feel free to get in touch if you have any questions or suggestions.</p>
-            <!-- Social Icons -->
-            <div class="footer-social-icons">
-                <a href="https://www.facebook.com/profile.php?id=100071262772055"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/taiyo_rosa/"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
+          <p class="footer-text">
+            Thank you for visiting! Feel free to get in touch if you have any
+            questions or suggestions.
+          </p>
+          <!-- Social Icons -->
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100071262772055"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/taiyo_rosa/"
+              ><i class="fa-brands fa-square-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
         </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright <i class="fa-regular fa-copyright"></i> Roshan. All rights
+          reserved.
+        </p>
+      </div>
     </div>
-    <div class="copyright">
-        <p>Copyright <i class="fa-regular fa-copyright"></i> Roshan. All rights reserved.</p>
-    </div>
-</div>
 
-   <script src="./assets/js/main.js"></script>
-
-</body>
-
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>

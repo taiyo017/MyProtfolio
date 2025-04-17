@@ -254,6 +254,13 @@
      padding: var(--spacing-xl) 0;
      background: var(--color-darker-bg);
    }
+
+   #services .subtitle {
+    color: var(--color-text-light);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+  }
    .services-list {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -297,94 +304,230 @@
    #portfolio {
      padding: var(--spacing-xl) 0;
    }
+   #portfolio .subtitle {
+    color: var(--color-text-light);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+  }
    .work-list {
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
      gap: var(--spacing-lg);
    }
-   .work {
-     position: relative;
-     overflow: hidden;
-     border-radius: var(--radius-lg);
-     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-     transition: transform var(--transition-fast);
-   }
-   .work img {
-     display: block;
-     width: 100%;
-     height: auto;
-     transition: transform var(--transition-fast);
-   }
-   .work:hover img {
-     transform: scale(1.05);
-   }
-   .layer {
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     height: 0;
-     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 0, 79, 0.8));
-     color: #fff;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     overflow: hidden;
-     padding: var(--spacing-md);
-     text-align: center;
-     transition: height var(--transition-med);
-   }
-   .work:hover .layer {
-     height: 100%;
-   }
-   .layer h3 {
-     font-size: 1.125rem;
-     margin-bottom: var(--spacing-sm);
-   }
-   .layer a {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     background: #fff;
-     color: var(--color-primary);
-     font-size: 1.25rem;
-     margin-top: var(--spacing-sm);
-     transition: background var(--transition-med), transform var(--transition-med);
-   }
-   .layer a:hover {
-     background: var(--color-primary);
-     color: var(--color-text-light);
-     transform: scale(1.1);
-   }
+   /* ========== Portfolio Work Card ========== */
+.work {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 28%;
+  max-width: 28%;
+}
 
-   .slideshow-container{
-    position: relative;
-   }
-   /* Show controls only in portfolio */
-   #portfolio .prev,
-   #portfolio .next {
-     display: block;
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     background: rgba(0, 0, 0, 0.5);
-     color: #fff;
-     border-radius: 50%;
-     padding: var(--spacing-md);
-     cursor: pointer;
-     user-select: none;
-   }
-   #portfolio .prev { left: var(--spacing-md); }
-   #portfolio .next { right: var(--spacing-md); }
-   #portfolio .prev:hover,
-   #portfolio .next:hover {
-     background: rgba(0, 0, 0, 0.7);
-   }
+.work:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.work img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.work:hover img {
+  transform: scale(1.04);
+}
+
+/* ========== Hover Layer Overlay ========== */
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(255, 0, 79, 0.85));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: height 0.4s ease;
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.layer h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.layer p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.layer a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.layer a:hover {
+  background: var(--color-primary);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ========== Slide Container ========== */
+.mySlides {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mySlides.active {
+  display: flex;
+}
+
+/* ========== Navigation Buttons ========== */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease;
+  z-index: 100;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* ========== Dot Pagination ========== */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* ========== Responsive Tweaks ========== */
+@media screen and (max-width: 1024px) {
+  .work {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
    
+@media screen and (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+  }
+
+  #portfolio .container {
+    padding: 0 16px;
+  }
+
+  .mySlides {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .mySlides.active {
+    display: flex;
+  }
+
+  .work {
+    width: 90%;
+    max-width: 380px;
+    border-radius: 14px;
+    background-color: #1e1e1e;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .work img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .layer {
+    padding: 16px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .prev, .next {
+    font-size: 22px;
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #717171;
+  }
+}
+
    /* ========================================
       Contact Section
       ======================================== */
@@ -572,10 +715,10 @@
      .header-text p {
        font-size: 0.875rem;
      }
-     .services-list,
-     .work-list {
+     .services-list {
        grid-template-columns: 1fr !important;
      }
+  
    }
    
    /* Very small */

@@ -13,33 +13,39 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-let slideIndex = 0;
 
-function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
-    let totalSlides = slides.length;
-
-    // Ensure the slides container only shows 3 at a time
-    for (let i = 0; i < totalSlides; i++) {
-        slides[i].style.display = "none"; // Hide all groups
-    }
-
-    // Show the current slide group
-    slides[slideIndex].style.display = "flex";
-}
+let slideIndex = 1;
+showSlides(slideIndex);
 
 function plusSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    let totalSlides = slides.length;
-
-    // Increment or decrement the slide index, ensuring it stays within bounds
-    slideIndex = (slideIndex + n + totalSlides) % totalSlides;
-
-    showSlides(); // Show the updated slide group
+  showSlides(slideIndex += n);
 }
 
-// Initialize the first slide
-showSlides();
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  slides[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].classList.add("active");
+}
+
+
+
 
 
 //side-menu js
