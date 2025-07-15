@@ -3,343 +3,589 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roshan Lama</title>
-     <link rel="icon" type="image/x-icon" href="./assets/Images/logo.png">
+    <title>Roshan Lama - Full Stack Developer</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/695c64f7ef.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4262XYXK66"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-4262XYXK66');
-</script>
+      gtag("config", "G-4262XYXK66");
+    </script>
   </head>
-
   <body>
-    <div id="header">
-      <div class="container">
-        <nav class="nav" id="nav">
-          <img src="./assets/Images/logo.png" class="logo" alt="Logo" />
-          <!-- Slide Menu -->
-          <ul id="slidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <!-- Hamburger Icon -->
-          <i class="fa-solid fa-bars open" onclick="responsiveNavbar()"></i>
-        </nav>
-
-        <div class="header-text">
-          <p>Full Stack Developer</p>
-          <h1>Hello, I am <span>Roshan</span> Lama, from Nepal</h1>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text"
+            >Roshan<span class="logo-accent">.</span></span
+          >
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link" data-section="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link" data-section="services"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link" data-section="portfolio"
+              >Portfolio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-toggle" id="nav-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <!-- -------------about-------------- -->
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <!-- About Column 1 (Image) -->
-          <div class="about-col-1">
-            <img src="./assets/Images/Myphoto.jpg" alt="Roshan Lama's Photo" />
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-background">
+        <div class="particles" id="particles"></div>
+        <div class="gradient-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-subtitle">Full Stack Developer</p>
+          <h1 class="hero-title">
+            Hello, I am <span class="text-gradient">Roshan</span><br />
+            Lama, from Nepal
+          </h1>
+          <p class="hero-description">
+            Passionate about creating innovative digital solutions that blend
+            creativity with functionality.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </a>
+            <a href="#portfolio" class="btn btn-secondary">
+              <i class="fas fa-eye"></i>
+              View Work
+            </a>
           </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
 
-          <!-- About Column 2 (Text Section) -->
-          <div class="about-col-2">
-            <h1 class="subtitle">About Me</h1>
-            <p class="about-text">
-              Meet Roshan Lama: A proud native of Lamjung, Nepal, I'm on a
-              mission to conquer the realm of Information Technology. Currently
-              pursuing my Bachelor's degree at Gandaki University in Pokhara, I
-              blend passion with purpose to craft innovative solutions. Join me
-              as I navigate the digital landscape, driven by curiosity and
-              fueled by ambition.
-            </p>
-
-            <!-- Tab Titles -->
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
-                Skills
-              </p>
-              <p class="tab-links" onclick="opentab('experience')">
-                Experience
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Get to know me better</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image">
+            <div class="image-wrapper">
+              <img
+                src="./assets/Images/Myphoto.jpg"
+                alt="Roshan Lama"
+                class="profile-image"
+              />
+              <div class="image-overlay"></div>
             </div>
-
-            <!-- Tab Contents -->
-            <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>UI/UX:</span> Designing Web/App interfaces</li>
-                <li>
-                  <span>Web Development:</span> Building responsive websites
-                </li>
-                <li>
-                  <span>App Development:</span> Crafting mobile applications
-                </li>
-              </ul>
-            </div>
-
-            <div class="tab-contents" id="experience">
+          </div>
+          <div class="about-info">
+            <div class="about-text">
               <p>
-                Though I may currently lack experience, I am brimming with
-                ambition and eagerness to learn. Join me as I embark on this
-                journey, poised to turn every challenge into an opportunity for
-                growth.
+                Meet Roshan Lama: A proud native of Lamjung, Nepal, I'm on a
+                mission to conquer the realm of Information Technology.
+                Currently pursuing my Bachelor's degree at Gandaki University in
+                Pokhara, I blend passion with purpose to craft innovative
+                solutions.
+              </p>
+              <p>
+                Join me as I navigate the digital landscape, driven by curiosity
+                and fueled by ambition to create meaningful digital experiences
+                that make a difference.
               </p>
             </div>
 
-            <div class="tab-contents" id="education">
-              <ul>
-                <li><span>2025:</span> BIT from Gandaki University</li>
-                <li><span>2021:</span> +2 Science from Prativa</li>
-                <li><span>2018:</span> SEE from HSBS Lamjung</li>
-              </ul>
+            <div class="tab-container">
+              <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="skills">Skills</button>
+                <button class="tab-btn" data-tab="experience">
+                  Experience
+                </button>
+                <button class="tab-btn" data-tab="education">Education</button>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane active" id="skills">
+                  <div class="skills-grid">
+                    <div class="skill-item">
+                      <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                      </div>
+                      <h4>UI/UX Design</h4>
+                      <p>Designing intuitive web and app interfaces</p>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                      </div>
+                      <h4>Web Development</h4>
+                      <p>Building responsive and dynamic websites</p>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                      </div>
+                      <h4>App Development</h4>
+                      <p>Crafting mobile applications</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane" id="experience">
+                  <div class="experience-content">
+                    <p>
+                      Though I may currently lack experience, I am brimming with
+                      ambition and eagerness to learn. Join me as I embark on
+                      this journey, poised to turn every challenge into an
+                      opportunity for growth.
+                    </p>
+                    <div class="experience-highlight">
+                      <i class="fas fa-rocket"></i>
+                      <span
+                        >Ready to take on new challenges and grow
+                        professionally</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane" id="education">
+                  <div class="education-timeline">
+                    <div class="timeline-item">
+                      <div class="timeline-year">2025</div>
+                      <div class="timeline-content">
+                        <h4>Bachelor in Information Technology</h4>
+                        <p>Gandaki University, Pokhara</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-year">2021</div>
+                      <div class="timeline-content">
+                        <h4>Higher Secondary (+2) Science</h4>
+                        <p>Prativa College</p>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="timeline-year">2018</div>
+                      <div class="timeline-content">
+                        <h4>Secondary Education Examination</h4>
+                        <p>HSBS Lamjung</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- -----------services-------- -->
-    <div id="services">
+    <!-- Services Section -->
+    <section id="services" class="services">
       <div class="container">
-        <h1 class="subtitle">My Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fas fa-laptop-code"></i>
-            <h2>Web Design</h2>
+        <div class="section-header">
+          <h2 class="section-title">My Services</h2>
+          <p class="section-subtitle">What I can do for you</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
             <p>
               From landing pages to dynamic web apps, I build fast, responsive,
               and SEO-friendly websites using modern tech stacks. Whether it's
               custom-coded or CMS-based, I ensure performance and usability go
               hand in hand.
             </p>
-            <a href="#">Learn More</a>
+            <div class="service-features">
+              <span class="feature-tag">Responsive Design</span>
+              <span class="feature-tag">Performance Optimization</span>
+              <span class="feature-tag">SEO Friendly</span>
+            </div>
           </div>
-          <div>
-            <i class="fas fa-pencil-ruler"></i>
-            <h2>UI/UX Design</h2>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>UI/UX Design</h3>
             <p>
               Crafting intuitive interfaces that prioritize user experience. I
               focus on clean, engaging designs backed by user research,
               wireframes, and prototyping — turning ideas into delightful
               digital experiences.
             </p>
-            <a href="#">Learn More</a>
+            <div class="service-features">
+              <span class="feature-tag">User Research</span>
+              <span class="feature-tag">Prototyping</span>
+              <span class="feature-tag">Design Systems</span>
+            </div>
           </div>
-          <div>
-            <i class="fas fa-cog"></i>
-            <h2>Maintenance & Support</h2>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3>Maintenance & Support</h3>
             <p>
               Ongoing support to keep your site or app secure, updated, and
               performing at its best. Bug fixes, optimizations, and feature
-              enhancements — I’ve got you covered.
+              enhancements — I've got you covered.
             </p>
-            <a href="#">Learn More</a>
+            <div class="service-features">
+              <span class="feature-tag">24/7 Support</span>
+              <span class="feature-tag">Regular Updates</span>
+              <span class="feature-tag">Performance Monitoring</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ----------portfolio--------- -->
-    <div id="portfolio">
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
       <div class="container">
-        <h1 class="subtitle">My Work</h1>
-        <div class="work-list slideshow-container">
-          <!-- Slide Group 1 -->
-          <div class="work-group mySlides active">
-            <div class="work">
-              <img
-                src="./assets/Images/school-website-basics.jpg"
-                alt="School Website Project"
-              />
-              <div class="layer">
-                <h3>School Website</h3>
-                <p>
-                  A responsive school website with admission forms, faculty
-                  section, notices, and a gallery. Focused on accessibility and
-                  mobile-first design.
-                </p>
-                <a href="#" target="_blank"
-                  ><i class="fa-solid fa-link"></i> View Project</a
-                >
-              </div>
-            </div>
-            <div class="work">
-              <img src="./assets/Images/ui.jpg" alt="UI/UX Design Project" />
-              <div class="layer">
-                <h3>UI/UX Design</h3>
-                <p>
-                  Mobile app interface for a local delivery service,
-                  prioritizing simplicity and intuitive flow. Designed with
-                  Figma following design thinking principles.
-                </p>
-                <a href="#" target="_blank"
-                  ><i class="fa-solid fa-link"></i> View Design</a
-                >
-              </div>
-            </div>
-            <div class="work">
-              <img src="./assets/Images/todo.jpg" alt="Todo List App" />
-              <div class="layer">
-                <h3>Todo List App</h3>
-                <p>
-                  Clean and user-friendly web app with CRUD operations and local
-                  storage. Optimized for mobile and desktop usability.
-                </p>
-                <a href="#" target="_blank"
-                  ><i class="fa-solid fa-link"></i> View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide Group 2 -->
-          <div class="work-group mySlides">
-            <div class="work">
-              <img
-                src="./assets/Images/Sort-O-Matic.jpg"
-                alt="Sortomatic Project"
-              />
-              <div class="layer">
-                <h3>Sortomatic</h3>
-                <p>
-                  AI-powered smart waste segregation system using TensorFlow and
-                  Arduino. Identifies and sorts biodegradable vs.
-                  non-biodegradable waste.
-                </p>
-                <a href="#" target="_blank"
-                  ><i class="fa-solid fa-link"></i> View Project</a
-                >
-              </div>
-            </div>
-            <div class="work">
-              <img
-                src="./assets/Images/Guessinggame.jpg"
-                alt="Guessing Game Project"
-              />
-              <div class="layer">
-                <h3>Guessing Game</h3>
-                <p>
-                  Java Swing-based number guessing adventure game with timer,
-                  leaderboard, and progressive UI elements. Dark mode supported.
-                </p>
-                <a href="#" target="_blank"
-                  ><i class="fa-solid fa-link"></i> View Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Prev/Next Buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="section-header">
+          <h2 class="section-title">My Work</h2>
+          <p class="section-subtitle">Check out my latest projects</p>
         </div>
 
-        <!-- Dot pagination -->
-        <div style="text-align: center; margin-top: 20px">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
+        <div class="portfolio-container">
+          <div class="portfolio-slider" id="portfolio-slider">
+            <div class="slide active">
+              <div class="portfolio-grid">
+                <div class="portfolio-item">
+                  <div class="portfolio-image">
+                    <img
+                      src="./assets/Images/school-website-basics.jpg"
+                      alt="School Website"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-content">
+                        <h3>School Website</h3>
+                        <p>
+                          A responsive school website with admission forms,
+                          faculty section, notices, and gallery. Focused on
+                          accessibility and mobile-first design.
+                        </p>
+                        <div class="portfolio-tech">
+                          <span class="tech-tag">HTML5</span>
+                          <span class="tech-tag">CSS3</span>
+                          <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="portfolio-link">
+                          <i class="fas fa-external-link-alt"></i>
+                          View Project
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-item">
+                  <div class="portfolio-image">
+                    <img src="./assets/Images/ui.jpg" alt="UI/UX Design" />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-content">
+                        <h3>UI/UX Design</h3>
+                        <p>
+                          Mobile app interface for a local delivery service,
+                          prioritizing simplicity and intuitive flow. Designed
+                          with Figma following design thinking principles.
+                        </p>
+                        <div class="portfolio-tech">
+                          <span class="tech-tag">Figma</span>
+                          <span class="tech-tag">Adobe XD</span>
+                          <span class="tech-tag">Prototyping</span>
+                        </div>
+                        <a href="#" class="portfolio-link">
+                          <i class="fas fa-external-link-alt"></i>
+                          View Design
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-item">
+                  <div class="portfolio-image">
+                    <img src="./assets/Images/todo.jpg" alt="Todo App" />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-content">
+                        <h3>Todo List App</h3>
+                        <p>
+                          Clean and user-friendly web app with CRUD operations
+                          and local storage. Optimized for mobile and desktop
+                          usability.
+                        </p>
+                        <div class="portfolio-tech">
+                          <span class="tech-tag">React</span>
+                          <span class="tech-tag">LocalStorage</span>
+                          <span class="tech-tag">CSS3</span>
+                        </div>
+                        <a href="#" class="portfolio-link">
+                          <i class="fas fa-external-link-alt"></i>
+                          View Project
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="portfolio-grid">
+                <div class="portfolio-item">
+                  <div class="portfolio-image">
+                    <img
+                      src="./assets/Images/Sort-O-Matic.jpg"
+                      alt="Sortomatic"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-content">
+                        <h3>Sortomatic</h3>
+                        <p>
+                          AI-powered smart waste segregation system using
+                          TensorFlow and Arduino. Identifies and sorts
+                          biodegradable vs. non-biodegradable waste.
+                        </p>
+                        <div class="portfolio-tech">
+                          <span class="tech-tag">TensorFlow</span>
+                          <span class="tech-tag">Arduino</span>
+                          <span class="tech-tag">Python</span>
+                        </div>
+                        <a href="#" class="portfolio-link">
+                          <i class="fas fa-external-link-alt"></i>
+                          View Project
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="portfolio-item">
+                  <div class="portfolio-image">
+                    <img
+                      src="assets/Images/Guessinggame.jpg"
+                      alt="Guessing Game"
+                    />
+                    <div class="portfolio-overlay">
+                      <div class="portfolio-content">
+                        <h3>Guessing Game</h3>
+                        <p>
+                          Java Swing-based number guessing adventure game with
+                          timer, leaderboard, and progressive UI elements. Dark
+                          mode supported.
+                        </p>
+                        <div class="portfolio-tech">
+                          <span class="tech-tag">Java</span>
+                          <span class="tech-tag">Swing</span>
+                          <span class="tech-tag">GUI</span>
+                        </div>
+                        <a href="#" class="portfolio-link">
+                          <i class="fas fa-external-link-alt"></i>
+                          View Project
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-controls">
+            <button class="portfolio-btn prev-btn" id="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="portfolio-btn next-btn" id="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="portfolio-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- -------------contact-------------- -->
-    <div id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
       <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <h1 class="subtitle">Contact Me</h1>
-            <p><i class="fa-regular fa-paper-plane"></i>info@lamaroshan12.com.np</p>
-            <p><i class="fa-solid fa-phone"></i>+977 9840850236</p>
-            <div class="social-icons">
-              <a href="https://www.facebook.com/profile.php?id=100071262772055"
-                ><i class="fa-brands fa-facebook"></i
-              ></a>
-              <a href="https://www.instagram.com/taiyo_rosa/"
-                ><i class="fa-brands fa-square-instagram"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Let's work together</p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>info@lamaroshan12.com.np</p>
+              </div>
             </div>
-            <a href="" class="btn btn2 download-btn">Download CV</a>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>+977 9840850236</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Lamjung, Nepal</p>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/profile.php?id=100071262772055"
+                class="social-link"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/taiyo_rosa/"
+                class="social-link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+
+            <a href="#" class="btn btn-primary download-cv">
+              <i class="fas fa-download"></i>
+              Download CV
+            </a>
           </div>
-          <div class="contact-right">
+
+          <div class="contact-form-container">
             <form
               name="submit-to-google-sheet"
-              action="https://script.google.com/macros/s/AKfycbyvugMTarLpu6FF7toZ3EfmPReFzgJmcIcjZ1hf89o72oDUFYYUmRgXZu7lxHHMtEH2/exec"
-              method="post"
+              class="contact-form"
+              id="contact-form"
             >
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="Message"
-                cols="30"
-                rows="10"
-                placeholder="Type your message here..."
-                required
-              ></textarea>
-              <button type="submit" class="btn btn2 submit-btn">
-                <span class="btn-text">Submit</span>
-                <span class="btn-loading" style="display: none"
-                  >Submitting...</span
-                >
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="Name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading">
+                  <i class="fas fa-spinner fa-spin"></i>
+                  Sending...
+                </span>
               </button>
             </form>
-            <span id="messg"></span>
+
+            <div class="form-message" id="form-message"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="footer">
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <p class="footer-text">
-            Thank you for visiting! Feel free to get in touch if you have any
-            questions or suggestions.
-          </p>
-          <!-- Social Icons -->
-          <div class="footer-social-icons">
-            <a href="https://www.facebook.com/profile.php?id=100071262772055"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a href="https://www.instagram.com/taiyo_rosa/"
-              ><i class="fa-brands fa-square-instagram"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
+          <div class="footer-text">
+            <p>
+              Thank you for visiting! Feel free to get in touch if you have any
+              questions or suggestions.
+            </p>
+            <p>&copy; 2025 Roshan Lama. All rights reserved.</p>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=100071262772055"
+              class="social-link"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/taiyo_rosa/" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>
-          <i class="fa-regular fa-copyright"></i> 2025 Roshan Lama. All rights
-          reserved.
-        </p>
-      </div>
-    </div>
+    </footer>
 
     <script src="./assets/js/main.js"></script>
   </body>
