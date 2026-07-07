@@ -3,544 +3,320 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roshan Lama - Full Stack Developer</title>
+    <title>Roshan Lama — Full Stack Developer</title>
     <link rel="icon" type="image/x-icon" href="./assets/Images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      rel="stylesheet"
-    />
   </head>
   <body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+      <div class="loader-content">
+        <div class="loader-line"></div>
+        <span class="loader-text">roshan.dev</span>
+      </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <span class="logo-text">Roshan<span class="logo-dot">.</span></span>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="#home" class="nav-logo">R<span class="accent">.</span></a>
+        <div class="nav-links" id="nav-links">
+          <a href="#work" class="nav-link" data-index="01">Work</a>
+          <a href="#about" class="nav-link" data-index="02">About</a>
+          <a href="#contact" class="nav-link" data-index="03">Contact</a>
         </div>
-        <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item">
-            <a href="#home" class="nav-link active" data-section="home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link" data-section="about">About</a>
-          </li>
-          <li class="nav-item">
-            <a href="#services" class="nav-link" data-section="services"
-              >Services</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#portfolio" class="nav-link" data-section="portfolio"
-              >Portfolio</a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link" data-section="contact"
-              >Contact</a
-            >
-          </li>
-        </ul>
-        <div class="nav-toggle" id="nav-toggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#work" class="mobile-link">Work</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+        <div class="mobile-footer">
+          <a href="https://github.com/taiyo017" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-      <div class="hero-background">
-        <div class="floating-shapes"></div>
-      </div>
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge">
-            <i class="fas fa-code"></i>
-            Full Stack Developer
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="hero-eyebrow" data-reveal>
+            <span class="eyebrow-line"></span>
+            <span>Full Stack Developer — Nepal</span>
           </div>
-          <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Roshan Lama</span><br />
-            Building Digital Excellence
+          <h1 class="hero-title" data-reveal>
+            <span class="title-line">I design &</span>
+            <span class="title-line">build <span class="accent">digital</span></span>
+            <span class="title-line">experiences<span class="period">.</span></span>
           </h1>
-          <p class="hero-description">
-            Passionate full-stack developer from Nepal, crafting innovative web
-            solutions with modern technologies and clean, efficient code.
+          <p class="hero-sub" data-reveal>
+            Crafting web applications with clean code and thoughtful design.
+            Currently building at <span class="highlight">SATRI</span>.
           </p>
-          <div class="hero-actions">
-            <a href="#portfolio" class="btn btn-primary">
-              <i class="fas fa-rocket"></i>
-              View My Work
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <i class="fas fa-paper-plane"></i>
-              Get In Touch
+          <div class="hero-cta" data-reveal>
+            <a href="#work" class="btn-primary">
+              <span>Selected Work</span>
+              <i class="fas fa-arrow-down"></i>
             </a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Projects</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">2+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Dedication</span>
+        </div>
+        <div class="hero-right">
+          <div class="hero-image-wrap" data-reveal>
+            <img src="./assets/Images/Myphoto.jpg" alt="Roshan Lama" class="hero-img" />
+            <div class="hero-image-tag">
+              <span class="tag-dot"></span>
+              Available for projects
             </div>
           </div>
-
-          <!-- Floating Tech Icons -->
-          <div class="floating-tech-icons">
-            <div class="tech-icon-float laravel-icon">
-              <i class="fab fa-laravel"></i>
-            </div>
-            <div class="tech-icon-float php-icon">
-              <i class="fab fa-php"></i>
-            </div>
-            <div class="tech-icon-float js-icon">
-              <i class="fab fa-js"></i>
-            </div>
-            <div class="tech-icon-float react-icon">
-              <i class="fab fa-react"></i>
-            </div>
-            <div class="tech-icon-float database-icon">
-              <i class="fas fa-database"></i>
-            </div>
+          <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
+
+      <!-- Marquee -->
+      <div class="marquee" data-reveal>
+        <div class="marquee-track">
+          <span>LARAVEL</span>
+          <span class="marquee-dot">●</span>
+          <span>JAVASCRIPT</span>
+          <span class="marquee-dot">●</span>
+          <span>REACT</span>
+          <span class="marquee-dot">●</span>
+          <span>MYSQL</span>
+          <span class="marquee-dot">●</span>
+          <span>TAILWIND</span>
+          <span class="marquee-dot">●</span>
+          <span>PHP</span>
+          <span class="marquee-dot">●</span>
+          <span>LARAVEL</span>
+          <span class="marquee-dot">●</span>
+          <span>JAVASCRIPT</span>
+          <span class="marquee-dot">●</span>
+          <span>REACT</span>
+          <span class="marquee-dot">●</span>
+          <span>MYSQL</span>
+          <span class="marquee-dot">●</span>
+          <span>TAILWIND</span>
+          <span class="marquee-dot">●</span>
+          <span>PHP</span>
+          <span class="marquee-dot">●</span>
         </div>
-        <span>Scroll Down</span>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-number">01</span>
+          <h2 class="section-title">Selected Work</h2>
+        </div>
+
+        <div class="work-list">
+          <!-- Project 1 -->
+          <article class="work-item" data-reveal>
+            <div class="work-item-inner">
+              <div class="work-info">
+                <span class="work-tag">Client Work</span>
+                <h3 class="work-title">Dynamic Corporate Platform</h3>
+                <p class="work-desc">Full-stack web application with admin panel, CMS, and secure authentication system. Built scalable architecture for content management.</p>
+                <div class="work-stack">
+                  <span>Laravel</span>
+                  <span>MySQL</span>
+                  <span>Blade</span>
+                </div>
+              </div>
+              <div class="work-image">
+                <img src="./assets/Images/satri.jpeg" alt="Corporate Platform" loading="lazy" />
+              </div>
+            </div>
+            <a href="https://satritech.com" target="_blank" rel="noopener" class="work-link">
+              View Project <i class="fas fa-arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="work-item" data-reveal>
+            <div class="work-item-inner">
+              <div class="work-info">
+                <span class="work-tag">Client Work</span>
+                <h3 class="work-title">Enterprise Management System</h3>
+                <p class="work-desc">Multi-user platform with role-based access control, granular permissions, and comprehensive admin dashboard.</p>
+                <div class="work-stack">
+                  <span>Laravel</span>
+                  <span>RBAC</span>
+                  <span>Dashboard</span>
+                </div>
+              </div>
+              <div class="work-image">
+                <img src="./assets/Images/Tecarch.jpg" alt="Enterprise System" loading="lazy" />
+              </div>
+            </div>
+            <a href="https://tecarch.com.np" target="_blank" rel="noopener" class="work-link">
+              View Project <i class="fas fa-arrow-up-right"></i>
+            </a>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="work-item" data-reveal>
+            <div class="work-item-inner">
+              <div class="work-info">
+                <span class="work-tag">Personal Project</span>
+                <h3 class="work-title">Task Management App</h3>
+                <p class="work-desc">Real-time task management with drag-and-drop, categories, and collaborative features.</p>
+                <div class="work-stack">
+                  <span>Laravel</span>
+                  <span>Vue.js</span>
+                  <span>MySQL</span>
+                </div>
+              </div>
+              <div class="work-image">
+                <img src="./assets/Images/todo.jpg" alt="Task App" loading="lazy" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="work-item" data-reveal>
+            <div class="work-item-inner">
+              <div class="work-info">
+                <span class="work-tag">AI/ML Project</span>
+                <h3 class="work-title">Sortomatic AI</h3>
+                <p class="work-desc">Machine learning system for automated waste classification using computer vision.</p>
+                <div class="work-stack">
+                  <span>Python</span>
+                  <span>TensorFlow</span>
+                  <span>Arduino</span>
+                </div>
+              </div>
+              <div class="work-image">
+                <img src="./assets/Images/Sort-O-Matic.jpg" alt="Sortomatic" loading="lazy" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="work-item" data-reveal>
+            <div class="work-item-inner">
+              <div class="work-info">
+                <span class="work-tag">Desktop App</span>
+                <h3 class="work-title">Number Guessing Game</h3>
+                <p class="work-desc">Interactive desktop application with difficulty levels, leaderboards, and polished UI.</p>
+                <div class="work-stack">
+                  <span>Java</span>
+                  <span>Swing</span>
+                  <span>SQLite</span>
+                </div>
+              </div>
+              <div class="work-image">
+                <img src="./assets/Images/Guessinggame.jpg" alt="Guessing Game" loading="lazy" />
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get To Know Me</span>
-          <h2 class="section-title">About Me</h2>
-        </div>
-        <div class="about-content">
-          <div class="about-image">
-            <div class="image-container">
-              <img
-                src="./assets/Images/Myphoto.jpg"
-                alt="Roshan Lama"
-                class="profile-image"
-              />
-              <div class="image-decoration"></div>
-            </div>
+        <div class="about-grid">
+          <div class="about-left" data-reveal>
+            <span class="section-number">02</span>
+            <h2 class="about-title">A bit about <span class="accent">me</span></h2>
           </div>
-          <div class="about-info">
-            <div class="about-text">
-              <p>
-                Hello! I'm Roshan Lama, a passionate full-stack developer from
-                the beautiful hills of Lamjung, Nepal. Currently pursuing my
-                Bachelor's degree in Information Technology at Gandaki
-                University, Pokhara.
-              </p>
-              <p>
-                I love creating digital experiences that solve real-world
-                problems. My journey in tech is driven by curiosity, continuous
-                learning, and the desire to build something meaningful that can
-                make a positive impact.
-              </p>
-            </div>
-
-            <div class="tabs-container">
-              <div class="tab-buttons">
-                <button class="tab-btn active" data-tab="skills">Skills</button>
-                <button class="tab-btn" data-tab="tools">Tools</button>
-                <button class="tab-btn" data-tab="experience">
-                  Experience
-                </button>
-              </div>
-
-              <div class="tab-content">
-                <div class="tab-pane active" id="skills">
-                  <div class="skills-grid">
-                    <div class="skill-card">
-                      <div class="skill-icon">
-                        <i class="fas fa-paint-brush"></i>
-                      </div>
-                      <h4>UI/UX Design</h4>
-                      <p>Creating beautiful, user-friendly interfaces</p>
-                    </div>
-                    <div class="skill-card">
-                      <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                      </div>
-                      <h4>Frontend Development</h4>
-                      <p>Building responsive, interactive web apps</p>
-                    </div>
-                    <div class="skill-card">
-                      <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                      </div>
-                      <h4>Backend Development</h4>
-                      <p>Developing robust server-side solutions</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tab-pane" id="tools">
-                  <div class="tools-grid">
-                    <div class="tool-item tool-float" data-tool="laravel">
-                      <i class="fab fa-laravel"></i>
-                      <span>Laravel</span>
-                    </div>
-                    <div class="tool-item tool-float" data-tool="html">
-                      <i class="fab fa-html5"></i>
-                      <span>HTML5</span>
-                    </div>
-                    <div class="tool-item tool-float" data-tool="javascript">
-                      <i class="fab fa-js"></i>
-                      <span>JavaScript</span>
-                    </div>
-                    <div class="tool-item tool-float" data-tool="css">
-                      <i class="fab fa-css3-alt"></i>
-                      <span>CSS3</span>
-                    </div>
-                    <div class="tool-item tool-float" data-tool="sass">
-                      <i class="fab fa-sass"></i>
-                      <span>Sass</span>
-                    </div>
-                    <div class="tool-item tool-float" data-tool="mysql">
-                      <i class="fas fa-database"></i>
-                      <span>MySQL</span>
-                    </div>
-                    <div class="tool-item tool-float" data-tool="tailwind">
-                      <i class="fas fa-wind"></i>
-                      <span>Tailwind CSS</span>
-                    </div>
-                    <div class="tool-item tool-float" data-tool="blade">
-                      <i class="fas fa-leaf"></i>
-                      <span>Blade</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="tab-pane" id="experience">
-                  <div class="experience-content">
-                    <div class="experience-card highlight-card">
-                      <div class="experience-icon">
-                        <i class="fas fa-code"></i>
-                      </div>
-                      <div class="experience-info">
-                        <h4>Full Stack Developer</h4>
-                        <p class="experience-period">Current Position</p>
-                        <p class="experience-company">SATRI</p>
-                        <p>
-                          Developing full-stack web applications using Laravel,
-                          MySQL, and modern JavaScript frameworks. Building
-                          dynamic websites with admin panels, role-based access
-                          control, and permission management systems.
-                          Responsible for both frontend and backend development,
-                          database design, and deployment.
-                        </p>
-                        <div class="experience-tags">
-                          <span class="exp-tag">Laravel</span>
-                          <span class="exp-tag">MySQL</span>
-                          <span class="exp-tag">JavaScript</span>
-                          <span class="exp-tag">Full Stack</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="experience-card">
-                      <div class="experience-icon">
-                        <i class="fas fa-briefcase"></i>
-                      </div>
-                      <div class="experience-info">
-                        <h4>Laravel Developer Intern</h4>
-                        <p class="experience-period">May 2025 - July 2025</p>
-                        <p class="experience-company">
-                          Virtual Technology Pvt Ltd
-                        </p>
-                        <p>
-                          Gained hands-on experience in Laravel development,
-                          working on real-world projects and learning industry
-                          best practices in web development.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="experience-card">
-                      <div class="experience-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                      </div>
-                      <div class="experience-info">
-                        <h4>Continuous Learning</h4>
-                        <p class="experience-period">2022 - Present</p>
-                        <p>
-                          Self-directed learning through projects, online
-                          courses, and staying updated with latest web
-                          development trends and technologies.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">What I Offer</span>
-          <h2 class="section-title">My Services</h2>
-        </div>
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-number">01</div>
-            <div class="service-icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <h3>Web Development</h3>
-            <p>
-              Full-stack web applications with modern frameworks, responsive
-              design, and optimized performance. From concept to deployment.
+          <div class="about-right">
+            <p class="about-text" data-reveal>
+              I'm Roshan Lama, a full-stack developer from Lamjung, Nepal. I build web applications that solve real problems using Laravel, JavaScript, and modern technologies.
             </p>
-            <div class="service-features">
-              <span class="feature-tag">Responsive Design</span>
-              <span class="feature-tag">Performance Optimization</span>
-              <span class="feature-tag">SEO Friendly</span>
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">02</div>
-            <div class="service-icon">
-              <i class="fas fa-palette"></i>
-            </div>
-            <h3>UI/UX Design</h3>
-            <p>
-              User-centered design solutions that combine aesthetics with
-              functionality. Creating intuitive interfaces that users love to
-              interact with.
+            <p class="about-text" data-reveal>
+              After completing my Bachelor's in Information Technology at Gandaki University, I joined SATRI as a full-stack developer where I work on enterprise applications, admin systems, and dynamic content platforms.
             </p>
-            <div class="service-features">
-              <span class="feature-tag">User Research</span>
-              <span class="feature-tag">Prototyping</span>
-              <span class="feature-tag">Design Systems</span>
-            </div>
-          </div>
 
-          <div class="service-card">
-            <div class="service-number">03</div>
-            <div class="service-icon">
-              <i class="fas fa-tools"></i>
-            </div>
-            <h3>Maintenance & Support</h3>
-            <p>
-              Ongoing support to keep your applications running smoothly.
-              Regular updates, bug fixes, and feature enhancements as your needs
-              evolve.
-            </p>
-            <div class="service-features">
-              <span class="feature-tag">24/7 Monitoring</span>
-              <span class="feature-tag">Regular Updates</span>
-              <span class="feature-tag">Bug Fixes</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">My Latest Work</span>
-          <h2 class="section-title">Portfolio</h2>
-        </div>
-
-        <div class="portfolio-slider">
-          <div class="portfolio-track" id="portfolio-track">
-            <div class="portfolio-slide active">
-              <div class="portfolio-grid">
-                <div class="portfolio-item featured">
-                  <div class="portfolio-image">
-                    <img src="./assets/Images/satri.jpeg" alt="Satritech" />
-                    <div class="portfolio-overlay">
-                      <div class="portfolio-content">
-                        <div class="featured-badge">
-                          <i class="fas fa-star"></i> Featured
-                        </div>
-                        <h3>Satritech.com</h3>
-                        <p>
-                          Full-stack dynamic website with comprehensive admin
-                          panel for content management. Built with Laravel and
-                          MySQL, featuring secure authentication, dynamic
-                          content updates, and responsive design.
-                        </p>
-                        <div class="portfolio-tech">
-                          <span class="tech-tag">Laravel</span>
-                          <span class="tech-tag">MySQL</span>
-                          <span class="tech-tag">Admin Panel</span>
-                          <span class="tech-tag">Dynamic CMS</span>
-                        </div>
-                        <a
-                          href="https://satritech.com"
-                          target="_blank"
-                          class="portfolio-btn"
-                        >
-                          <i class="fas fa-external-link-alt"></i>
-                          Visit Website
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="portfolio-item featured">
-                  <div class="portfolio-image">
-                    <img src="./assets/Images/Tecarch.jpg" alt="Tecarch" />
-                    <div class="portfolio-overlay">
-                      <div class="portfolio-content">
-                        <div class="featured-badge">
-                          <i class="fas fa-star"></i> Featured
-                        </div>
-                        <h3>Tecarch.com.np</h3>
-                        <p>
-                          Advanced dynamic website with role-based access
-                          control and permission management system. Features
-                          multi-user authentication, granular permissions, and
-                          comprehensive admin dashboard built with Laravel.
-                        </p>
-                        <div class="portfolio-tech">
-                          <span class="tech-tag">Laravel</span>
-                          <span class="tech-tag">MySQL</span>
-                          <span class="tech-tag">Role Management</span>
-                          <span class="tech-tag">Permissions</span>
-                        </div>
-                        <a
-                          href="https://tecarch.com.np"
-                          target="_blank"
-                          class="portfolio-btn"
-                        >
-                          <i class="fas fa-external-link-alt"></i>
-                          Visit Website
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="about-details" data-reveal>
+              <div class="detail-row">
+                <span class="detail-label">Based in</span>
+                <span class="detail-value">Lamjung, Nepal</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Education</span>
+                <span class="detail-value">BIT, Gandaki University</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Current</span>
+                <span class="detail-value">Full Stack Developer @ SATRI</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Previously</span>
+                <span class="detail-value">Laravel Intern @ Virtual Technology</span>
               </div>
             </div>
 
-            <div class="portfolio-slide">
-              <div class="portfolio-grid">
-                <div class="portfolio-item">
-                  <div class="portfolio-image">
-                    <img
-                      src="./assets/Images/todo.jpg"
-                      alt="Todo Application"
-                    />
-                    <div class="portfolio-overlay">
-                      <div class="portfolio-content">
-                        <h3>Task Management App</h3>
-                        <p>
-                          Full-featured todo application with user
-                          authentication, categories, and real-time updates
-                          using Laravel and Vue.js.
-                        </p>
-                        <div class="portfolio-tech">
-                          <span class="tech-tag">Laravel</span>
-                          <span class="tech-tag">Vue.js</span>
-                          <span class="tech-tag">MySQL</span>
-                        </div>
-                        <a href="#" class="portfolio-btn">
-                          <i class="fas fa-external-link-alt"></i>
-                          View Project
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+            <div class="about-tech" data-reveal>
+              <h3 class="tech-title">Tech I work with</h3>
+              <div class="tech-list">
+                <div class="tech-item">
+                  <i class="fab fa-laravel"></i>
+                  <span>Laravel</span>
                 </div>
-
-                <div class="portfolio-item">
-                  <div class="portfolio-image">
-                    <img
-                      src="./assets/Images/Sort-O-Matic.jpg"
-                      alt="Sortomatic AI"
-                    />
-                    <div class="portfolio-overlay">
-                      <div class="portfolio-content">
-                        <h3>Sortomatic AI</h3>
-                        <p>
-                          AI-powered waste segregation system using machine
-                          learning to automatically sort biodegradable and
-                          non-biodegradable waste.
-                        </p>
-                        <div class="portfolio-tech">
-                          <span class="tech-tag">Python</span>
-                          <span class="tech-tag">TensorFlow</span>
-                          <span class="tech-tag">Arduino</span>
-                        </div>
-                        <a href="#" class="portfolio-btn">
-                          <i class="fas fa-external-link-alt"></i>
-                          View Project
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                <div class="tech-item">
+                  <i class="fab fa-php"></i>
+                  <span>PHP</span>
                 </div>
-
-                <div class="portfolio-item">
-                  <div class="portfolio-image">
-                    <img
-                      src="./assets/Images/Guessinggame.jpg"
-                      alt="Guessing Game"
-                    />
-                    <div class="portfolio-overlay">
-                      <div class="portfolio-content">
-                        <h3>Number Guessing Game</h3>
-                        <p>
-                          Interactive Java Swing application with multiple
-                          difficulty levels, leaderboards, and engaging user
-                          interface.
-                        </p>
-                        <div class="portfolio-tech">
-                          <span class="tech-tag">Java</span>
-                          <span class="tech-tag">Swing</span>
-                          <span class="tech-tag">SQLite</span>
-                        </div>
-                        <a href="#" class="portfolio-btn">
-                          <i class="fas fa-external-link-alt"></i>
-                          View Project
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                <div class="tech-item">
+                  <i class="fab fa-js"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fab fa-react"></i>
+                  <span>React</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fas fa-database"></i>
+                  <span>MySQL</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fas fa-wind"></i>
+                  <span>Tailwind</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fab fa-html5"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fab fa-css3-alt"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fab fa-git-alt"></i>
+                  <span>Git</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fab fa-figma"></i>
+                  <span>Figma</span>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="portfolio-controls">
-            <button class="portfolio-nav prev" id="portfolio-prev">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="portfolio-nav next" id="portfolio-next">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-
-          <div class="portfolio-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
           </div>
         </div>
       </div>
@@ -549,85 +325,40 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Let's Connect</span>
-          <h2 class="section-title">Get In Touch</h2>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <p>info@lamaroshan12.com.np</p>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Phone</h4>
-                <p>+977 9840850236</p>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Location</h4>
-                <p>Lamjung, Nepal</p>
-              </div>
-            </div>
-
-            <div class="social-links">
-              <a
-                href="https://www.facebook.com/profile.php?id=100071262772055"
-                class="social-link"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i>
+        <div class="contact-grid">
+          <div class="contact-left" data-reveal>
+            <span class="section-number">03</span>
+            <h2 class="contact-title">Let's <span class="accent">connect</span></h2>
+            <p class="contact-text">
+              Got a project in mind? Let's talk about how I can help bring your ideas to life.
+            </p>
+            <a href="mailto:info@lamaroshan12.com.np" class="contact-email">
+              info@lamaroshan12.com.np
+            </a>
+            <div class="contact-socials">
+              <a href="https://github.com/taiyo017" target="_blank" class="social-link" data-social="GitHub">
+                <i class="fab fa-github"></i>
               </a>
-              <a
-                href="https://www.instagram.com/taiyo_rosa/"
-                class="social-link"
-                target="_blank"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
-                class="social-link"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/" target="_blank" class="social-link" data-social="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
               </a>
+              <a href="https://www.facebook.com/profile.php?id=100071262772055" target="_blank" class="social-link" data-social="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/taiyo_rosa/" target="_blank" class="social-link" data-social="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
-
-            <a href="#" class="btn btn-primary download-cv">
-              <i class="fas fa-download"></i>
-              Download CV
-            </a>
           </div>
-
-          <div class="contact-form-wrapper">
-            <form
-              name="submit-to-google-sheet"
-              class="contact-form"
-              id="contact-form"
-            >
+          <div class="contact-right" data-reveal>
+            <form id="contact-form" class="contact-form">
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Full Name</label>
+                  <label for="name">Name</label>
                   <input type="text" id="name" name="Name" required />
                 </div>
                 <div class="form-group">
-                  <label for="email">Email Address</label>
+                  <label for="email">Email</label>
                   <input type="email" id="email" name="email" required />
                 </div>
               </div>
@@ -637,26 +368,11 @@
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea
-                  id="message"
-                  name="Message"
-                  rows="5"
-                  required
-                ></textarea>
+                <textarea id="message" name="Message" rows="4" required></textarea>
               </div>
-              <button
-                type="submit"
-                class="btn btn-primary submit-btn"
-                id="submit-btn"
-              >
-                <span class="btn-text">
-                  <i class="fas fa-paper-plane"></i>
-                  Send Message
-                </span>
-                <span class="btn-loading">
-                  <i class="fas fa-spinner fa-spin"></i>
-                  Sending...
-                </span>
+              <button type="submit" class="btn-submit" id="submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading"><i class="fas fa-spinner fa-spin"></i></span>
               </button>
             </form>
             <div class="form-message" id="form-message"></div>
@@ -668,128 +384,23 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-column footer-about">
-            <div class="footer-logo">
-              <span class="logo-text"
-                >Roshan<span class="logo-dot">.</span></span
-              >
-            </div>
-            <p class="footer-description">
-              Full-stack developer crafting innovative web solutions with
-              Laravel, JavaScript, and modern technologies. Based in Nepal 🇳🇵
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://www.facebook.com/profile.php?id=100071262772055"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                class="social-icon"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/taiyo_rosa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                class="social-icon"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/roshan-lama-7a42a3298/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                class="social-icon"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                class="social-icon"
-              >
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
+        <div class="footer-inner">
+          <div class="footer-left">
+            <span class="footer-logo">R<span class="accent">.</span></span>
+            <p>Building digital experiences from Nepal.</p>
           </div>
-
-          <div class="footer-column footer-links">
-            <h4 class="footer-title">Quick Links</h4>
-            <ul class="footer-menu">
-              <li><a href="#home" class="footer-link">Home</a></li>
-              <li><a href="#about" class="footer-link">About</a></li>
-              <li><a href="#services" class="footer-link">Services</a></li>
-              <li><a href="#portfolio" class="footer-link">Portfolio</a></li>
-              <li><a href="#contact" class="footer-link">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-column footer-services">
-            <h4 class="footer-title">Services</h4>
-            <ul class="footer-menu">
-              <li>
-                <a href="#services" class="footer-link">Web Development</a>
-              </li>
-              <li><a href="#services" class="footer-link">UI/UX Design</a></li>
-              <li>
-                <a href="#services" class="footer-link">Laravel Development</a>
-              </li>
-              <li>
-                <a href="#services" class="footer-link"
-                  >Maintenance & Support</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column footer-contact">
-            <h4 class="footer-title">Get In Touch</h4>
-            <ul class="footer-info">
-              <li>
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:info@lamaroshan12.com.np" class="footer-link">
-                  info@lamaroshan12.com.np
-                </a>
-              </li>
-              <li>
-                <i class="fas fa-phone"></i>
-                <a href="tel:+9779840850236" class="footer-link">
-                  +977 9840850236
-                </a>
-              </li>
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Lamjung, Nepal</span>
-              </li>
-            </ul>
+          <div class="footer-right">
+            <a href="https://github.com/taiyo017" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/roshan-lama-7a42a3298/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100071262772055" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/taiyo_rosa/" target="_blank"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-
         <div class="footer-bottom">
-          <div class="footer-bottom-content">
-            <p class="footer-copyright">
-              &copy; 2025 <span class="gradient-text">Roshan Lama</span>. All
-              rights reserved.
-            </p>
-            <div class="footer-bottom-links">
-              <a href="#" class="footer-bottom-link">Privacy Policy</a>
-              <span class="separator">•</span>
-              <a href="#" class="footer-bottom-link">Terms of Service</a>
-            </div>
-          </div>
+          <span>&copy; 2025 Roshan Lama</span>
+          <span>Nepal 🇳🇵</span>
         </div>
       </div>
-
-      <!-- Back to Top Button -->
-      <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-      </button>
     </footer>
 
     <script src="./assets/js/script.js"></script>
